@@ -65,6 +65,23 @@ class Start extends StatelessWidget {
 
             FlatButton(
               child: Text(
+                'Linkedin',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Raleway',
+                  fontSize: 15.0,
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Linkedin()),
+                );
+              },
+            ),
+
+            FlatButton(
+              child: Text(
                 'Instagram',
                 style: TextStyle(
                   color: Colors.white,
@@ -80,22 +97,22 @@ class Start extends StatelessWidget {
               },
             ),
 
-            FlatButton(
-              child: Text(
-                'Snapchat',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Raleway',
-                  fontSize: 15.0,
-                ),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Snapchat()),
-                );
-              },
-            ),
+            // FlatButton(
+            //   child: Text(
+            //     'Snapchat',
+            //     style: TextStyle(
+            //       color: Colors.white,
+            //       fontFamily: 'Raleway',
+            //       fontSize: 15.0,
+            //     ),
+            //   ),
+            //   onPressed: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => Snapchat()),
+            //     );
+            //   },
+            // ),
 
             FlatButton(
               child: Text(
@@ -131,22 +148,22 @@ class Start extends StatelessWidget {
               },
             ),
 
-            FlatButton(
-              child: Text(
-                'Tiktok',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Raleway',
-                  fontSize: 15.0,
-                ),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Tiktok()),
-                );
-              },
-            ),
+            // FlatButton(
+            //   child: Text(
+            //     'Tiktok',
+            //     style: TextStyle(
+            //       color: Colors.white,
+            //       fontFamily: 'Raleway',
+            //       fontSize: 15.0,
+            //     ),
+            //   ),
+            //   onPressed: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => Tiktok()),
+            //     );
+            //   },
+            // ),
           ],
         ),
       ),
@@ -174,6 +191,26 @@ class Contact extends StatelessWidget {
   }
 }
 
+class Linkedin extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          FlatButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Image.asset('assets/linkedin.png'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class Instagram extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -194,25 +231,25 @@ class Instagram extends StatelessWidget {
   }
 }
 
-class Snapchat extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Image.asset('assets/snapchat2.jpg'),
-          ),
-        ],
-      ),
-    );
-  }
-}
+// class Snapchat extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Colors.white,
+//       body: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: <Widget>[
+//           FlatButton(
+//             onPressed: () {
+//               Navigator.pop(context);
+//             },
+//             child: Image.asset('assets/snapchat2.jpg'),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
 
 class Facebook extends StatelessWidget {
   @override
@@ -254,22 +291,22 @@ class Twitter extends StatelessWidget {
   }
 }
 
-class Tiktok extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Image.asset('assets/tiktok2.png'),
-          ),
-        ],
-      ),
-    );
-  }
-}
+// class Tiktok extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: Colors.white,
+//       body: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: <Widget>[
+//           FlatButton(
+//             onPressed: () {
+//               Navigator.pop(context);
+//             },
+//             child: Image.asset('assets/tiktok2.png'),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
