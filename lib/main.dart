@@ -97,23 +97,6 @@ class Start extends StatelessWidget {
               },
             ),
 
-            // FlatButton(
-            //   child: Text(
-            //     'Snapchat',
-            //     style: TextStyle(
-            //       color: Colors.white,
-            //       fontFamily: 'Raleway',
-            //       fontSize: 15.0,
-            //     ),
-            //   ),
-            //   onPressed: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(builder: (context) => Snapchat()),
-            //     );
-            //   },
-            // ),
-
             FlatButton(
               child: Text(
                 'Facebook',
@@ -147,23 +130,6 @@ class Start extends StatelessWidget {
                 );
               },
             ),
-
-            // FlatButton(
-            //   child: Text(
-            //     'Tiktok',
-            //     style: TextStyle(
-            //       color: Colors.white,
-            //       fontFamily: 'Raleway',
-            //       fontSize: 15.0,
-            //     ),
-            //   ),
-            //   onPressed: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(builder: (context) => Tiktok()),
-            //     );
-            //   },
-            // ),
           ],
         ),
       ),
@@ -231,26 +197,6 @@ class Instagram extends StatelessWidget {
   }
 }
 
-// class Snapchat extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: Colors.white,
-//       body: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: <Widget>[
-//           FlatButton(
-//             onPressed: () {
-//               Navigator.pop(context);
-//             },
-//             child: Image.asset('assets/snapchat2.jpg'),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
 class Facebook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -290,23 +236,3 @@ class Twitter extends StatelessWidget {
     );
   }
 }
-
-// class Tiktok extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: Colors.white,
-//       body: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: <Widget>[
-//           FlatButton(
-//             onPressed: () {
-//               Navigator.pop(context);
-//             },
-//             child: Image.asset('assets/tiktok2.png'),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
