@@ -1,3 +1,5 @@
+import 'package:contactcard/nav_button.dart';
+import 'package:contactcard/qr_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -46,192 +48,27 @@ class Start extends StatelessWidget {
               ],
             ),
 
-            FlatButton(
-              child: Text(
-                'Contact',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Raleway',
-                  fontSize: 15.0,
-                ),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Contact()),
-                );
-              },
-            ),
+            navButton('Contact', () => Navigator.push(context, MaterialPageRoute(
+              builder: (context) => QRPage(qrPath: 'assets/contact.png'),
+            ))),
 
-            FlatButton(
-              child: Text(
-                'Linkedin',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Raleway',
-                  fontSize: 15.0,
-                ),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Linkedin()),
-                );
-              },
-            ),
+            navButton('Linkedin', () => Navigator.push(context, MaterialPageRoute(
+              builder: (context) => QRPage(qrPath: 'assets/linkedin.png'),
+            ))),
 
-            FlatButton(
-              child: Text(
-                'Instagram',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Raleway',
-                  fontSize: 15.0,
-                ),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Instagram()),
-                );
-              },
-            ),
+            navButton('Facebook', () => Navigator.push(context, MaterialPageRoute(
+              builder: (context) => QRPage(qrPath: 'assets/facebook.png'),
+            ))),
 
-            FlatButton(
-              child: Text(
-                'Facebook',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Raleway',
-                  fontSize: 15.0,
-                ),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Facebook()),
-                );
-              },
-            ),
+            navButton('Instagram', () => Navigator.push(context, MaterialPageRoute(
+              builder: (context) => QRPage(qrPath: 'assets/instagram.png'),
+            ))),
 
-            FlatButton(
-              child: Text(
-                'Twitter',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Raleway',
-                  fontSize: 15.0,
-                ),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Twitter()),
-                );
-              },
-            ),
+            navButton('Twitter', () => Navigator.push(context, MaterialPageRoute(
+              builder: (context) => QRPage(qrPath: 'assets/twitter.png'),
+            ))),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class Contact extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Image.asset('assets/contact.png'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Linkedin extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Image.asset('assets/linkedin.png'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Instagram extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Image.asset('assets/instagram.png'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Facebook extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Image.asset('assets/facebook.png'),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Twitter extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Image.asset('assets/twitter.png'),
-          ),
-        ],
       ),
     );
   }
